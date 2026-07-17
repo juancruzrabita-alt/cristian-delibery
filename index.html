@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cristian Delivery — Comida casera a tu puerta | La Plata</title>
-<meta name="description" content="Milanesas monstruo, tortillas, empanadas, pastas caseras y más. Delivery y retiro en el local. Calle 18 e/ 70 y 71, La Plata. Pedí por WhatsApp.">
+<meta name="description" content="Milanesas monstruo, pizzas, empanadas, pastas caseras, rabas y más. Delivery y retiro en el local. Calle 18 e/ 70 y 71, La Plata. Pedí por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -460,14 +460,14 @@ footer{
   <div class="hero-content">
     <span class="hero-kicker">Comida casera · La Plata</span>
     <h1>La mila que<br>no entra <em>en la puerta.</em></h1>
-    <p>Milanesas monstruo, tortillas, pastas caseras y empanadas hechas al momento. Pedís por acá, te llega por WhatsApp, lo recibís en tu casa o lo retirás por el local.</p>
+    <p>Milanesas monstruo, pizzas, empanadas, pastas caseras y rabas hechas al momento. Pedís por acá, te llega por WhatsApp, lo recibís en tu casa o lo retirás por el local.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#menu">Pedir ahora</a>
       <a class="btn-ghost" href="#como-pedir">Cómo funciona</a>
     </div>
     <div class="hero-pills">
       <span class="pill">🛵 <b>Delivery</b> &nbsp;y retiro en el local</span>
-      <span class="pill">🕢 Mié a Lun · <b>19:30 – 23:30</b></span>
+      <span class="pill">🕢 Mié a Lun · <b>19 – 23 hs</b></span>
       <span class="pill">📍 Calle 18 e/ 70 y 71</span>
     </div>
   </div>
@@ -492,13 +492,14 @@ footer{
       <div class="footer-col">
         <h4>Horarios</h4>
         <p><b>Miércoles a lunes</b></p>
-        <p>19:30 a 23:30 hs</p>
+        <p>19 a 23 hs</p>
         <p>Martes cerrado</p>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
         <p><b>Calle 18 e/ 70 y 71</b><br>La Plata, Buenos Aires</p>
-        <a id="footer-wsp" href="#" target="_blank" rel="noopener">WhatsApp: 221 409-831</a>
+        <a id="footer-wsp" href="#" target="_blank" rel="noopener">WhatsApp: 221 409-9831</a>
+        <p>Tel: 452 8920</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -582,153 +583,116 @@ footer{
 
 <script>
 /* ═══════════════ CONFIG ═══════════════ */
-const WSP_NUMBER = "549221409831"; // formato internacional sin "+": 54 9 + área + número
+const WSP_NUMBER = "5492214099831"; // formato internacional sin "+": 54 9 + área + número
 
 /* ═══════════════ MENÚ ═══════════════ */
 const MENU = [
   {
-    id:"tortillas", name:"Tortillas", index:"01",
-    note:"De papa, bien doradas y con cebolla caramelizada. Pensadas para compartir.",
+    id:"milanesas", name:"Milanesas", index:"01",
+    note:"Nuestra especialidad, porciones abundantes: comen 2. Las monstruo van con salsa napolitana, cheddar o crema de panceta y verdeo — aclaralo en la nota del pedido.",
+    groups:[
+      { label:"Monstruo", items:[
+        {id:"mil-monstruo", name:"Milanesa monstruo", price:33000, rec:true, img:"img/hero-monstruo.jpg",
+         desc:"Para 2/3 personas. Con salsa napolitana, cheddar o crema de panceta y verdeo."},
+        {id:"mil-super-monstruo", name:"Súper milanesa monstruo", price:39000, rec:true, img:"img/mila-cheddar.png",
+         desc:"Para 3/4 personas. Con salsa napolitana, cheddar o crema de panceta y verdeo."},
+      ]},
+      { label:"Comen 2", items:[
+        {id:"mil-guarnicion", name:"Milanesa con guarnición", price:22000, img:"img/mila-caballo-2.jpg",
+         desc:"Milanesa con la guarnición que elijas."},
+        {id:"mil-caballo", name:"Milanesa a caballo", price:25000, img:"img/mila-caballo.jpg",
+         desc:"Con huevos fritos por encima."},
+        {id:"mil-jyq", name:"Milanesa con jamón y queso", price:25000, img:"img/mila-napolitana.jpg",
+         desc:"Jamón y mozzarella gratinada."},
+        {id:"mil-napolitana", name:"Milanesa napolitana", price:25000, rec:true, img:"img/mila-napolitana.jpg",
+         desc:"Salsa, jamón y mozzarella gratinada."},
+        {id:"mil-cheddar", name:"Milanesa con cheddar", price:25000, img:"img/mila-cheddar.png",
+         desc:"Cubierta de cheddar fundido."},
+        {id:"mil-crema", name:"Milanesa a la crema con panceta y verdeo", price:25000, img:"img/mila-crema.jpg",
+         desc:"Crema de panceta y verdeo por encima."},
+        {id:"mil-roquefort", name:"Milanesa con roquefort", price:25000, img:"img/mila-roquefort.jpg",
+         desc:"Mozzarella y roquefort fundidos."},
+        {id:"mil-caprese", name:"Milanesa capresse", price:25000, img:"img/mila-napolitana.jpg",
+         desc:"Tomate, albahaca y mozzarella."},
+        {id:"mil-fugazzeta", name:"Milanesa fugazzeta", price:25000, img:"img/mila-roquefort.jpg",
+         desc:"Cebolla y mozzarella estilo fugazzeta."},
+      ]},
+    ]
+  },
+  {
+    id:"pizzas", name:"Pizzas", index:"02",
     items:[
-      {id:"tor-papas", name:"Tortilla de papas", price:21999, img:"img/tortilla-papas.jpg", rec:true,
-       desc:"Papas, cebolla caramelizada y huevo. Para compartir."},
-      {id:"tor-jyq", name:"Tortilla rellena de jamón y queso", price:27990, img:"img/tortilla-rellena.jpg",
-       desc:"Papas, cebolla caramelizada y huevos. Rellena con jamón y mozzarella."},
-      {id:"tor-provo", name:"Tortilla rellena de provoleta y panceta", price:27990, img:"img/tortilla-rellena.jpg",
-       desc:"Papas, cebolla caramelizada y huevos. Rellena con panceta y provoleta."},
-      {id:"tor-esp", name:"Tortilla española", price:27990, img:"img/tortilla-espanola.png",
+      {id:"piz-muzza", name:"Pizza muzzarella", price:10000, rec:true,
+       desc:"La clásica muzza."},
+      {id:"piz-roque", name:"Pizza roquefort", price:12000,
+       desc:"Muzzarella y roquefort."},
+      {id:"piz-especial", name:"Pizza especial", price:12000,
+       desc:"Muzzarella y jamón."},
+      {id:"piz-calabresa", name:"Pizza calabresa", price:12000,
+       desc:"Muzzarella y longaniza calabresa."},
+    ]
+  },
+  {
+    id:"empanadas", name:"Empanadas", index:"03",
+    note:"Cada una $2.500 · La docena $30.000. En la docena elegís los gustos que quieras.",
+    items:[
+      {id:"emp-docena", name:"Docena de empanadas", price:30000, rec:true, img:"img/empanadas.png",
+       desc:"12 empanadas a elección — aclaranos los gustos en la nota del pedido."},
+      {id:"emp-carne", name:"Empanada de carne", price:2500, img:"img/empanadas.png", desc:"De carne, al horno."},
+      {id:"emp-pollo", name:"Empanada de pollo", price:2500, img:"img/empanadas.png", desc:"De pollo, al horno."},
+      {id:"emp-jyq", name:"Empanada de jamón y queso", price:2500, img:"img/empanadas.png", desc:"Jamón y queso, al horno."},
+      {id:"emp-verdura", name:"Empanada de verdura", price:2500, img:"img/empanadas.png", desc:"De verdura, al horno."},
+      {id:"emp-caprese", name:"Empanada caprese", price:2500, img:"img/empanadas.png", desc:"Tomate, albahaca y muzzarella, al horno."},
+      {id:"emp-cebolla", name:"Empanada de cebolla y queso", price:2500, img:"img/empanadas.png", desc:"Cebolla y queso, al horno."},
+    ]
+  },
+  {
+    id:"guarnicion", name:"Guarnición", index:"04",
+    items:[
+      {id:"gua-papas", name:"Papas fritas", price:9000, img:"img/papas-clasicas.png",
+       desc:"Porción abundante."},
+      {id:"gua-papas-cheddar", name:"Papas cheddar", price:12000, img:"img/papas-cheddar.jpg",
+       desc:"Bañadas en salsa cheddar."},
+      {id:"gua-papas-crema", name:"Papas a la crema con panceta y verdeo", price:12000, img:"img/papas-crema.jpg",
+       desc:"Con crema de panceta y verdeo por encima."},
+      {id:"gua-papas-mixtas", name:"Papas mixtas", price:12000, img:"img/papas-cheddar.jpg",
+       desc:"Mitad crema, mitad cheddar. Lo mejor de los dos mundos."},
+      {id:"gua-tortilla", name:"Tortilla", price:14000, rec:true, img:"img/tortilla-papas.jpg",
+       desc:"Tortilla de papas, bien dorada."},
+      {id:"gua-tortilla-jyq", name:"Tortilla rellena con jamón y queso", price:16000, img:"img/tortilla-rellena.jpg",
+       desc:"Rellena con jamón y mozzarella."},
+      {id:"gua-tortilla-provo", name:"Tortilla rellena con panceta y provoleta", price:16000, img:"img/tortilla-rellena.jpg",
+       desc:"Rellena con panceta y provoleta."},
+      {id:"gua-tortilla-esp", name:"Tortilla española", price:16000, img:"img/tortilla-espanola.png",
        desc:"Papas, huevo, morrón, cebolla y chorizo colorado."},
     ]
   },
   {
-    id:"milanesas", name:"Milanesas", index:"02",
-    note:"Nuestra especialidad. De la individual a la monstruo para cuatro: todas con papas.",
-    groups:[
-      { label:"Para 4 personas", items:[
-        {id:"mil-super-monstruo", name:"Súper milanesa monstruo", price:59999, img:"img/hero-monstruo.jpg",
-         desc:"Napolitana, papas fritas, mozzarella y 4 huevos fritos."},
-        {id:"mil-super-cheddar", name:"Súper monstruo cheddar", price:59999, img:"img/mila-cheddar.png",
-         desc:"Cheddar, jamón, mozzarella, huevos fritos y papas."},
-        {id:"mil-super-crema", name:"Súper monstruo crema", price:59999, img:"img/mila-crema.jpg",
-         desc:"Crema de panceta y verdeo, jamón, mozzarella, huevos y papas."},
-      ]},
-      { label:"Para 3 personas", items:[
-        {id:"mil-mons-cheddar", name:"Mila monstruo cheddar", price:44999, rec:true, img:"img/mila-cheddar.png",
-         desc:"La monstruo con cheddar. Comen 3."},
-        {id:"mil-mons-crema", name:"Mila monstruo crema", price:44999, rec:true, img:"img/mila-crema.jpg",
-         desc:"La monstruo con crema de panceta y verdeo. Comen 3."},
-        {id:"mil-monstruo", name:"Milanesa monstruo", price:44999, img:"img/hero-monstruo.jpg",
-         desc:"La clásica monstruo. Comen 3."},
-      ]},
-      { label:"Para 2 personas", items:[
-        {id:"mil-guarnicion", name:"Mila con guarnición", price:31999, img:"img/mila-caballo-2.jpg",
-         desc:"Milanesa con la guarnición que elijas."},
-        {id:"mil-napolitana", name:"Mila napolitana", price:39999, img:"img/mila-napolitana.jpg",
-         desc:"Salsa, jamón y mozzarella gratinada, con papas."},
-        {id:"mil-caballo", name:"Milanesa a caballo", price:34999, img:"img/mila-caballo.jpg",
-         desc:"Con dos huevos fritos, papas y pan."},
-        {id:"mil-cheddar", name:"Milanesa cheddar", price:34999, img:"img/mila-cheddar.png",
-         desc:"Cubierta de cheddar fundido, con papas."},
-        {id:"mil-caprese", name:"Milanesa caprese", price:34999, img:"img/mila-napolitana.jpg",
-         desc:"Tomate, albahaca y mozzarella, con papas."},
-        {id:"mil-jyq", name:"Mila con jamón y queso", price:34999, img:"img/mila-napolitana.jpg",
-         desc:"Jamón y mozzarella gratinada, con papas."},
-        {id:"mil-fugazzeta", name:"Milanesa fugazzeta", price:34999, img:"img/mila-roquefort.jpg",
-         desc:"Cebolla y mozzarella estilo fugazzeta, con papas."},
-        {id:"mil-roquefort", name:"Mila roquefort", price:34999, img:"img/mila-roquefort.jpg",
-         desc:"Mozzarella y roquefort fundidos, con papas."},
-        {id:"mil-crema", name:"Mila a la crema", price:34999, img:"img/mila-crema.jpg",
-         desc:"Crema de panceta y verdeo, con papas."},
-      ]},
-      { label:"Individuales", items:[
-        {id:"mil-ind", name:"Milanesa individual", price:19999, img:"img/mila-caballo-2.jpg",
-         desc:"Milanesa con papas, tamaño individual."},
-        {id:"mil-ind-napo", name:"Mila napo individual", price:21999, rec:true, img:"img/mila-napolitana.jpg",
-         desc:"Napolitana individual con papas."},
-        {id:"mil-ind-mons-cheddar", name:"Mila monstruo cheddar individual", price:24999, img:"img/mila-cheddar.png",
-         desc:"La monstruo cheddar en versión individual."},
-        {id:"mil-ind-mons-crema", name:"Mila monstruo crema individual", price:24999, img:"img/mila-crema.jpg",
-         desc:"La monstruo crema en versión individual."},
-        {id:"mil-ind-monstruo", name:"Mila monstruo individual", price:24999, rec:true, img:"img/hero-monstruo.jpg",
-         desc:"La monstruo clásica en versión individual."},
-        {id:"mil-ind-crema", name:"Mila individual a la crema", price:21999, img:"img/mila-crema.jpg",
-         desc:"Con crema de panceta y verdeo, individual."},
-        {id:"mil-ind-cheddar", name:"Mila individual cheddar", price:21999, img:"img/mila-cheddar.png",
-         desc:"Con cheddar fundido, individual."},
-      ]},
+    id:"pastas", name:"Pastas caseras", index:"05",
+    note:"Incluyen salsa y queso. Salsas: bolognesa, fileto o crema — aclaralo en la nota del pedido.",
+    items:[
+      {id:"pas-sorr-jyq", name:"Sorrentinos de jamón y queso", price:18000, img:"img/sorrentinos.jpg",
+       desc:"Con la salsa que elijas."},
+      {id:"pas-sorr-calabaza", name:"Sorrentinos de calabaza y mozzarella", price:18000, img:"img/sorrentinos.jpg",
+       desc:"Con la salsa que elijas."},
+      {id:"pas-ravioles", name:"Ravioles de verdura", price:18000, img:"img/raviolones.jpg",
+       desc:"Con la salsa que elijas."},
     ]
   },
   {
-    id:"hamburguesas", name:"Hamburguesas", index:"03",
+    id:"rabas", name:"Rabas", index:"06",
     items:[
-      {id:"ham-doble", name:"Hamburguesa doble", price:14999,
-       desc:"Doble medallón, doble cheddar, cebolla caramelizada, huevo y papas."},
-      {id:"ham-xl", name:"Hamburguesa XL", price:14999,
-       desc:"Medallón XL, lechuga, tomate, jamón, cheddar y papas."},
+      {id:"rab-papas", name:"Rabas con papas", price:30000, rec:true,
+       desc:"Rabas bien crocantes con papas fritas. Para 2 personas."},
     ]
   },
   {
-    id:"pollo", name:"Pollo frito", index:"04",
+    id:"ensaladas", name:"Ensaladas", index:"07",
     items:[
-      {id:"pol-6", name:"Pollo frito · 6 piezas", price:10999, rec:true, img:"img/pollo-6.png",
-       desc:"Alitas rebozadas en cereales, bien crocantes."},
-      {id:"pol-8", name:"Pollo frito · 8 piezas", price:19990, img:"img/pollo-8.png",
-       desc:"Alitas rebozadas en cereales con papas fritas. Para 2 personas."},
-    ]
-  },
-  {
-    id:"papas", name:"Papas fritas", index:"05",
-    items:[
-      {id:"pap-clasicas", name:"Papas fritas", price:11999, img:"img/papas-clasicas.png",
-       desc:"Porción abundante, cortadas a cuchillo."},
-      {id:"pap-crema", name:"Papas con crema", price:14999, img:"img/papas-crema.jpg",
-       desc:"Con crema de panceta y verdeo por encima."},
-      {id:"pap-cheddar", name:"Papas con salsa cheddar", price:14999, img:"img/papas-cheddar.jpg",
-       desc:"Bañadas en salsa cheddar."},
-      {id:"pap-mixtas", name:"Papas mixtas", price:14999, img:"img/papas-cheddar.jpg",
-       desc:"Mitad crema, mitad cheddar. Lo mejor de los dos mundos."},
-    ]
-  },
-  {
-    id:"empanadas", name:"Empanadas", index:"06",
-    note:"Al horno, hechas en el día. En la docena elegís los gustos que quieras.",
-    items:[
-      {id:"emp-docena", name:"Docena de empanadas", price:30000, rec:true, img:"img/empanadas.png",
-       desc:"12 empanadas a elección — aclaranos los gustos en la nota del pedido."},
-      {id:"emp-carne", name:"Empanada de carne", price:2500, rec:true, img:"img/empanadas.png", desc:"De carne, al horno."},
-      {id:"emp-pollo", name:"Empanada de pollo", price:2500, rec:true, img:"img/empanadas.png", desc:"De pollo, al horno."},
-      {id:"emp-jyq", name:"Empanada de jamón y queso", price:2500, rec:true, img:"img/empanadas.png", desc:"Jamón y queso, al horno."},
-      {id:"emp-verdura", name:"Empanada de verdura", price:2500, img:"img/empanadas.png", desc:"De verdura, al horno."},
-      {id:"emp-cebolla", name:"Empanada de cebolla y muzzarella", price:2500, img:"img/empanadas.png", desc:"Cebolla y muzzarella, al horno."},
-      {id:"emp-caprese", name:"Empanada caprese", price:2500, img:"img/empanadas.png", desc:"Tomate, albahaca y muzzarella, al horno."},
-    ]
-  },
-  {
-    id:"pastas", name:"Pastas caseras", index:"07",
-    note:"Amasadas acá. Salen con la salsa que elijas: aclaralo en la nota del pedido.",
-    items:[
-      {id:"pas-raviolones", name:"Raviolones de verdura en masa de espinaca", price:24999, img:"img/raviolones.jpg",
-       desc:"12 unidades, masa de espinaca."},
-      {id:"pas-sorr-jyq", name:"Sorrentinos de jamón y mozzarella", price:24999, img:"img/sorrentinos.jpg",
-       desc:"12 unidades."},
-      {id:"pas-sorr-calabaza", name:"Sorrentinos de calabaza y mozzarella", price:24999, img:"img/sorrentinos.jpg",
-       desc:"12 unidades."},
-    ]
-  },
-  {
-    id:"ensaladas", name:"Ensaladas", index:"08",
-    items:[
-      {id:"ens-mixta", name:"Ensalada mixta", price:9499, img:"img/ensalada-mixta.png",
-       desc:"Lechuga, tomate y cebolla."},
-      {id:"ens-1", name:"Ensalada completa", price:9499, img:"img/ensalada-completa.png",
-       desc:"Consultá los ingredientes del día."},
-    ]
-  },
-  {
-    id:"bebidas", name:"Bebidas", index:"09",
-    items:[
-      {id:"beb-coca", name:"Línea Coca-Cola 1,5 L", price:5999,
-       desc:"Coca-Cola, Sprite o Fanta. Aclaranos cuál en la nota."},
+      {id:"ens-chica", name:"Ensalada chica", price:8000, img:"img/ensalada-mixta.png",
+       desc:"4 ingredientes a elección."},
+      {id:"ens-grande", name:"Ensalada grande", price:10000, img:"img/ensalada-completa.png",
+       desc:"6 ingredientes a elección."},
     ]
   },
 ];
